@@ -1,0 +1,32 @@
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0ignoring option PermSize=128m; support was removed in 8.0
+
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future releaseUsing incremental CMS is deprecated and will likely be removed in a future release
+
+Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
+Java HotSpot(TM) 64-Bit Server VM warning: ignoring option PermSize=128m; support was removed in 8.0
+Java HotSpot(TM) 64-Bit Server VM warning: Using incremental CMS is deprecated and will likely be removed in a future release
+XIO:  fatal IO error 0 (Success) on X server ":118"
+XIO:  fatal IO error 0 (Success) on X server ":116"
+      after 585 requests (585 known processed) with 1 events remaining.
+      after 585 requests (585 known processed) with 1 events remaining.
+XIO:  fatal IO error 0 (Success) on X server ":115"
+      after 585 requests (585 known processed) with 1 events remaining.
+XIO:  fatal IO error 0 (Success) on X server ":119"
+      after 585 requests (585 known processed) with 1 events remaining.
+XIO:  fatal IO error 0 (Success) on X server ":120"
+      after 585 requests (585 known processed) with 1 events remaining.
+XIO:  fatal IO error 0 (Success) on X server ":121"
+      after 585 requests (585 known processed) with 1 events remaining.
