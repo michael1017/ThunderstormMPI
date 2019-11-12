@@ -8,7 +8,7 @@ public:
     std::string tif_location, csv_location;
     std::vector <std::string> data_list;
     ThunderStormMpi(std::string tif_location, std::string csv_location, int size, int rank);
-    void GenCSV();
+    void GenCSV(int i);
     void ReduceCSV();
     
 private:

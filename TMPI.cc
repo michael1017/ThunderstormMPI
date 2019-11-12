@@ -16,22 +16,22 @@ ThunderStormMpi::ThunderStormMpi(std::string tif_location, std::string csv_locat
     CheckLocation();
     GenDataList();
 }
-void ThunderStormMpi::GenCSV(){
+void ThunderStormMpi::GenCSV(int time){
     std::string tif;
     std::string csv;
     std::string command;
+    int exec_status;
     
-    for (int i=rank; i<10; i+=size) {
-        tif = tif_location + data_list[i] + ".tif";
-        csv = csv_location + data_list[i] + ".csv";
-        
-        command = "./xvfb-run-safe.sh /home/sc20/eecs2205/Fiji.app/ImageJ-linux64 -macro /home/sc20/eecs2205/Fiji.app/parallel/ijmTemplate.ijm " + tif + "," + csv + " >> log.txt";
-        std::cout << tif + " , " + csv << std::endl;
-        std::cout << command << std::endl;
-        system(command.c_str());        
-        std::cout << "done " << i << std::endl;
-    }
-    MPI_Barrier(MPI_COMM_WORLD);
+    std::cout << "Rank " << rank << " get job " << time << std::endl;
+    tif = tif_location + data_list[time] + ".tif";
+    csv = csv_location + data_list[time] + ".csv";
+    
+    command = "./xvfb-run-safe.sh /home/sc20/eecs2205/Fiji.app/ImageJ-linux64 -macro /home/sc20/eecs2205/Fiji.app/parallel/ijmTemplate.ijm " + tif + "," + csv + " >> log.txt";
+    std::cout << tif + " , " + csv << std::endl;
+    //std::cout << command << std::endl;
+    exec_status = system(command.c_str());        
+    std::cout << "Rank " << rank << " finished job " << time << " with return value " << exec_status << std::endl;
+    
 }
 void ThunderStormMpi::ReduceCSV(){
     std::string data_name = data_list[0];
@@ -42,7 +42,7 @@ void ThunderStormMpi::ReduceCSV(){
         std::ostringstream time; 
         time << i+1; 
         std::string cmd = "awk -F\",\" 'NR>1{printf \"" + time.str() + ",%s,%s,%s,%s,%s,%s,%s,%s\\n\",$2,$3,$1,$4,$5,$6,$7,$8}' " + csv_location + data_name + ".csv >> " + csv_location + "result.csv";
-        system(cmd.c_str());
+        exec_status = system(cmd.c_str());
     }
 }
 void ThunderStormMpi::GenDataList(){

@@ -16,8 +16,9 @@ int main(int argc, char** argv){
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     ThunderStormMpi t(tif, csv, size, rank);
-    t.GenCSV();
-    
+    for (int i=rank; i<10; i+=size){
+        t.GenCSV(i);
+    }
     MPI_Barrier(MPI_COMM_WORLD);
     if(rank == 0) {
         t.ReduceCSV();
@@ -25,4 +26,3 @@ int main(int argc, char** argv){
     MPI_Finalize();
     return 0;
 }
-
