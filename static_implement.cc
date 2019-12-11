@@ -8,7 +8,6 @@
 #include <cstdlib>
 #include "TMPI.hpp"
 int main(int argc, char** argv){
-    //suppose size == 10;
     MPI_Init(&argc, &argv);  
     int rank, size;  
     std::string tif(argv[1]);
@@ -16,7 +15,7 @@ int main(int argc, char** argv){
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     ThunderStormMpi t(tif, csv, size, rank);
-    for (int i=rank; i<10; i+=size){
+    for (int i=rank; i<t.data_list.size(); i+=size){
         t.GenCSV(i);
     }
     MPI_Barrier(MPI_COMM_WORLD);

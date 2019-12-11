@@ -12,7 +12,7 @@
 #include "TMPI.hpp"
 using namespace std;
 
-int total_jobs = 10;
+int total_jobs;
 atomic_int current_jobID;
 int MPI_size;
 int MPI_rank;
@@ -49,7 +49,7 @@ int main(int argc, char** argv){
     MPI_Comm_size(MPI_COMM_WORLD, &MPI_size);
 	MPI_Comm_rank(MPI_COMM_WORLD, &MPI_rank);
     ThunderStormMpi t(tif, csv, MPI_size, MPI_rank);
-
+    total_jobs = t.data_list.size();
     MPI_Barrier(MPI_COMM_WORLD);
 
     if (MPI_rank == 0) {
