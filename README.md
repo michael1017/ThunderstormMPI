@@ -12,7 +12,7 @@
 ```
 ./mpi_d.out /tif/location/ /csv/destination/
 ```
-these two version need to be careful that remember add the slash(/) after /tif/location and /csv/destination, or it may cause error
+these two versions need to be careful that remember to add the slash(/) after /tif/location and /csv/destination, or it may cause an error
 ## Installation
 1. Require
     * ImageJ
